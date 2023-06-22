@@ -35,7 +35,7 @@ Navbar.propTypes = {
 }
 
 Navbar.defaultProps = {
-    title: "Set title of page",
-    home: "Set home name of page",
-    about: "Set about name of page"
+    title: "Set Title of Page",
+    home: "Home",
+    about: "About"
 }
