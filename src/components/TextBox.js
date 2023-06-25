@@ -38,7 +38,7 @@ export default function TextBox(props) {
         setText(joinText);
     }
 
-    const sortText = () => {
+    const sortText = () => {                        // Function to Sort Text (Alphabetic Order / Assecending Order)
         let splitText = text.split("");
         let sort = splitText.sort();
         let joinText = sort.join("");

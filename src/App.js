@@ -1,3 +1,4 @@
+import Accordian from "./components/Accordian";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
 
@@ -10,6 +11,11 @@ function App() {
       <div className="container my-4">
         <TextBox textBoxName="Enter your Text Below"/>
       </div>
+      {/* For Accordian/Dark Mode */}
+      <div className="container my-3">
+        <Accordian/>
+      </div>
+
     </>
   );
 }
