@@ -8,16 +8,19 @@ export default function Accordian() {
     border: "3px solid white"
   })
 
-  const [buttonText, setButtonText] = useState("Enable Dark Mode")      // Default Text on the Button
+  const [buttonText, setButtonText] = useState("Enable Dark Mode");      // Default Text on the Button
+  const [btnColor, setBtnColor] = useState("dark");
+
 
   let changeTheme = () => {                 // Toggle the style when the button will click
     if (style.backgroundColor === "white") {
       setStyle({
         color: "white",
-        backgroundColor: "#343a40",
+        backgroundColor: "#212529",
         border: "3px solid #343a40",
       });
       setButtonText("Enable Light Mode");
+      setBtnColor("light");
     }
     else {
       setStyle({
@@ -26,6 +29,7 @@ export default function Accordian() {
         border: "3px solid white"
       });
       setButtonText("Enable Dark Mode");
+      setBtnColor("dark");
     }
   }
 
@@ -74,7 +78,7 @@ export default function Accordian() {
       </div>
 
       <div className="container">
-        <div className="btn btn-outline-dark my-4" onClick={changeTheme}>{buttonText}</div>
+        <div className={`btn btn-${btnColor} my-4`} onClick={changeTheme}>{buttonText}</div>
       </div>
     </>
   )

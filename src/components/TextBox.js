@@ -66,26 +66,26 @@ export default function TextBox(props) {
     return (
         <>
         <div className='container'>
-            <h1>{props.textBoxName}</h1>
+            <h1 style={{color: props.mode==="light"?"black":"white"}}>{props.textBoxName}</h1>
             <div className="mb-3">
-                <textarea className="form-control my-3" value={text} id="textBox" rows="8" onChange={handleChanging}></textarea>
+                <textarea className="form-control my-3" value={text} id="textBox" rows="8" style={{backgroundColor: props.mode==="light"?"white":"#212529", color: props.mode==="light"?"black":"white"}} onChange={handleChanging}></textarea>
             </div>
-            <div className="btn btn-outline-dark mx-2" onClick={convertUpperCase}>Convert into UpperCase</div>
+            <div className="btn btn-outline-warning mx-2" onClick={convertUpperCase}>Convert into UpperCase</div>
             <div className="btn btn-outline-primary mx-2" onClick={convertLowerCase}>Convert into LowerCase</div>
             <div className="btn btn-outline-success mx-2" onClick={clearText}>Clear Text</div>
             <div className="btn btn-outline-info mx-2" onClick={copyText}>Copy to ClipBoard</div>
-            <div className="btn btn-outline-secondary mx-2" onClick={revString}>Reverse Text</div>
+            <div className="btn btn-outline-primary mx-2" onClick={revString}>Reverse Text</div>
             <div className="btn btn-outline-warning mx-2" onClick={sortText}>Sort Text</div>
             <div className="btn btn-outline-danger mx-2" id='Toggle' onClick={speakText}>Speak Text</div>
 
         </div>
         {/* Counting Words, characters & preview the written text */}
-        <div className="container my-3">
+        <div className="container my-3" style={{color: props.mode==="light"?"black":"white"}}>
             <p>Total Words used: <b>{words}</b></p>
             <p>Total Characters used: <b>{text.length}</b></p>
             <p>Total time took to read: <b>{Math.floor(0.08*words)}</b> minutes (approx)</p>
             <h3>Preview of your text</h3>
-            <p>{text}</p>
+            <p>{text.length>0?text:<b>Enter text inside the box above to preview your text</b>}</p>
         </div>
         </>
     )
