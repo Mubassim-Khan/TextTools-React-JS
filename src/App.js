@@ -13,9 +13,11 @@ function App() {
     if (theme === "light") {
       setTheme("dark");
       document.body.style.backgroundColor = "#343a40";
+      document.title = "Text Tools - Home (Dark Mode)";
     } else {
       setTheme("light");
       document.body.style.backgroundColor = "white";
+      document.title = "Text Tools - Home (Light Mode)";
     }
   }
 

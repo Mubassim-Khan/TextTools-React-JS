@@ -86,8 +86,8 @@ export default function TextBox(props) {
         </div>
         {/* Counting Words, characters & preview the written text */}
         <div className="container my-3" style={{color: props.mode==="light"?"black":"white"}}>
-            <p>Total Words used: <b>{words}</b></p>
-            <p>Total Characters used: <b>{text.length}</b></p>
+            <p>Total Words: <b>{words}</b></p>
+            <p>Total Characters: <b>{text.length}</b></p>
             <p>Total time took to read: <b>{Math.floor(0.08*words)}</b> minutes (approx)</p>
             <h3>Preview of your text</h3>
             <p>{text.length>0?text:<b>Enter text inside the box above to preview your text</b>}</p>
