@@ -12,23 +12,26 @@ export default function TextBox(props) {
         // console.log("Convert uppercase Clicked");
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlertMsg("Converted into UpperCase", "success");
     }
 
     const convertLowerCase = () => {                // Function to Convert text into Lower Case
         // console.log('LowerCase Clicked');
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlertMsg("Converted into LowerCase", "success");
     }
 
     const clearText = () => {                       // Function to Clear Text from box
         setText('');
+        props.showAlertMsg("Text Field cleared", "success");
     }
 
     const copyText = () => {                        // Function to Copy Text
         let copy = document.getElementById("textBox");
         copy.select();
         navigator.clipboard.writeText(copy.value);
-        alert("Copied to Clipboard");
+        props.showAlertMsg("Copied to ClipBoard", "success");
     }
 
     const revString = () => {                       // Function to Reverse String
@@ -36,6 +39,7 @@ export default function TextBox(props) {
         let rev = splitText.reverse();
         let joinText = rev.join("");
         setText(joinText);
+        props.showAlertMsg("Converted into Reverse Order", "success");
     }
 
     const sortText = () => {                        // Function to Sort Text (Alphabetic Order / Assecending Order)
@@ -43,12 +47,13 @@ export default function TextBox(props) {
         let sort = splitText.sort();
         let joinText = sort.join("");
         setText(joinText);
+        props.showAlertMsg("Sorted into Asscending / Alphabetical Order", "success");
     }
 
     const speakText = () => {                       // Function for text to speech
         let msg = new SpeechSynthesisUtterance(text);
         window.speechSynthesis.speak(msg);
-
+        props.showAlertMsg("Processing Request, Please wait", "warning");
         const toogle = document.getElementById("Toggle");
 
         if (toogle.textContent === "Speak Text") {
