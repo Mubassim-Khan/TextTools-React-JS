@@ -1,8 +1,15 @@
+import './App.css';
 import Accordian from "./components/Accordian";
 import AlertMsg from "./components/AlertMsg";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Routes
+} from 'react-router-dom';
+
 
 function App() {
   // For Changing Theme into Dark & Light
@@ -38,18 +45,27 @@ function App() {
 
   return (
     <>
-      {/* For Navbar */}
-      <Navbar title="Text Tools" home="Home" about="About Us" mode={theme} changeTheme={changeTheme}/>
-      {/* For Alert Messages (must be below Navbar) */}
-      <AlertMsg alert={alert} />
-      {/* For Text Area */}
-      <div className="container my-4">
-        <TextBox textBoxName="Enter your Text Below" mode={theme} showAlertMsg={showAlertMsg}/>
-      </div>
+      <BrowserRouter>
+        {/* For Navbar */}
+        <Navbar title="Text Tools" home="Home" about="About Us" mode={theme} changeTheme={changeTheme} />
+        {/* For Alert Messages (must be below Navbar) */}
+        <AlertMsg alert={alert} />
+        {/* For Text Area */}
+        <Routes>
+
+          <Route exact path='/' element={<div className="container my-4"><TextBox textBoxName="Enter your Text Below" mode={theme} showAlertMsg={showAlertMsg} /> </div>} >
+
+          </Route>
+
+          <Route exact path="/about" element={<div className="container my-3"><Accordian /></div>}>
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
       {/* For Accordian (Sample Dark Mode) */}
-      <div className="container my-3">
+      {/* <div className="container my-3">
         <Accordian/>
-      </div>
+      </div> */}
     </>
   );
 }
