@@ -9,7 +9,7 @@ export default function Navbar(props) {
     }
 
     let changeTitleHome = () => {
-        document.title = "Text Tools - Home";
+        document.title = "Text Tools - Word Counter | Character Counter | LowerCase Converter | UpperCase Converter | Text Sorter | Text to Speech";
     }
 
     return (

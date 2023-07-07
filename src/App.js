@@ -20,11 +20,11 @@ function App() {
     if (theme === "light") {
       setTheme("dark");
       document.body.style.backgroundColor = "#343a40";
-      document.title = "Text Tools - Home (Dark Mode)";
+      document.title = "Text Tools - Word Counter | Character Counter | LowerCase Converter | UpperCase Converter | Text Sorter | Text to Speech (Dark Mode)";
     } else {
       setTheme("light");
       document.body.style.backgroundColor = "white";
-      document.title = "Text Tools - Home (Light Mode)";
+      document.title = "Text Tools - Word Counter | Character Counter | LowerCase Converter | UpperCase Converter | Text Sorter | Text to Speech (Light Mode)";
     }
   }
 
@@ -53,11 +53,11 @@ function App() {
         {/* For Text Area */}
         <Routes>
 
-          <Route exact path='/' element={<div className="container my-4"><TextBox textBoxName="Enter your Text Below" mode={theme} showAlertMsg={showAlertMsg} /> </div>} >
+          <Route exact path='/' element={<div className="container my-4"><TextBox textBoxName="Enter Text Below" mode={theme} showAlertMsg={showAlertMsg} /> </div>} >
 
           </Route>
 
-          <Route exact path="/about" element={<div className="container my-3"><Accordian /></div>}>
+          <Route exact path="/about" element={<div className="container my-3"><Accordian mode={theme}/></div>}>
           </Route>
 
         </Routes>

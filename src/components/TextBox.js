@@ -24,13 +24,14 @@ export default function TextBox(props) {
 
     const clearText = () => {                       // Function to Clear Text from box
         setText('');
-        props.showAlertMsg("Text Field cleared", "success");
+        props.showAlertMsg("Text Field Cleared", "success");
     }
 
     const copyText = () => {                        // Function to Copy Text
         let copy = document.getElementById("textBox");
         copy.select();
         navigator.clipboard.writeText(copy.value);
+        document.getSelection().removeAllRanges();
         props.showAlertMsg("Copied to ClipBoard", "success");
     }
 
@@ -66,31 +67,32 @@ export default function TextBox(props) {
         }
     }
 
-    let words = text.split(" ").length - 1;
+    let words = text.split(" ").filter((element)=>{return element.length !== 0}).length
 
     return (
         <>
         <div className='container'>
-            <h1 style={{color: props.mode==="light"?"black":"white"}}>{props.textBoxName}</h1>
+            <h1 className='mb-3' style={{color: props.mode==="light"?"black":"white"}}>{props.textBoxName}</h1>
             <div className="mb-3">
                 <textarea className="form-control my-3" value={text} id="textBox" rows="8" style={{backgroundColor: props.mode==="light"?"white":"#212529", color: props.mode==="light"?"black":"white"}} onChange={handleChanging}></textarea>
             </div>
-            <div className="btn btn-outline-warning mx-2" onClick={convertUpperCase}>Convert into UpperCase</div>
-            <div className="btn btn-outline-primary mx-2" onClick={convertLowerCase}>Convert into LowerCase</div>
-            <div className="btn btn-outline-success mx-2" onClick={clearText}>Clear Text</div>
-            <div className="btn btn-outline-info mx-2" onClick={copyText}>Copy to ClipBoard</div>
-            <div className="btn btn-outline-primary mx-2" onClick={revString}>Reverse Text</div>
-            <div className="btn btn-outline-warning mx-2" onClick={sortText}>Sort Text</div>
-            <div className="btn btn-outline-danger mx-2" id='Toggle' onClick={speakText}>Speak Text</div>
-
+            <button disabled={text.length===0} className="btn btn-outline-warning mx-2 my-1" onClick={convertUpperCase}>Convert into UpperCase</button>
+            <button disabled={text.length===0} className="btn btn-outline-primary mx-2 my-1" onClick={convertLowerCase}>Convert into LowerCase</button>
+            <button disabled={text.length===0} className="btn btn-outline-success mx-2 my-1" onClick={clearText}>Clear Text</button>
+            <button disabled={text.length===0} className="btn btn-outline-info mx-2 my-1" onClick={copyText}>Copy to ClipBoard</button>
+            <button disabled={text.length===0} className="btn btn-outline-primary mx-2 my-1" onClick={revString}>Reverse Text</button>
+            <button disabled={text.length===0} className="btn btn-outline-warning mx-2 my-1" onClick={sortText}>Sort Text</button>
+            <button disabled={text.length===0} className="btn btn-outline-danger mx-2 my-1" id='Toggle' onClick={speakText}>Text to Speech</button>
         </div>
+
         {/* Counting Words, characters & preview the written text */}
+
         <div className="container my-3" style={{color: props.mode==="light"?"black":"white"}}>
             <p>Total Words: <b>{words}</b></p>
             <p>Total Characters: <b>{text.length}</b></p>
             <p>Total time took to read: <b>{Math.floor(0.08*words)}</b> minutes (approx)</p>
-            <h3>Preview of your text</h3>
-            <p>{text.length>0?text:<b>Enter text inside the box above to preview your text</b>}</p>
+            <h3>Preview of Text</h3>
+            <p>{text.length>0?text:<b>No Text to Preview</b>}</p>
         </div>
         </>
     )
