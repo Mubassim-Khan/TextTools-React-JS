@@ -57,7 +57,7 @@ function App() {
 
           </Route>
 
-          <Route exact path="/about" element={<div className="container my-3"><Accordian mode={theme}/></div>}>
+          <Route exact path="/about" element={<div className="container my-3"><Accordian mode={theme} /></div>}>
           </Route>
 
         </Routes>
