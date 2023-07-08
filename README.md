@@ -15,6 +15,7 @@ Note: These Options can be performed by clicking their respective button.
 Get access to Text Tools App by clicking the link below
 
 [Text Tools App (Github Pages)](https://mubassim-khan.github.io/TextTools-React-JS/)
+
 [Text Tools App (Netlify)](https://mtexttools.netlify.app/)
 #
 
