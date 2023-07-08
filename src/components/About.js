@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Accordian(props) {
+export default function About(props) {
 
   const style = {
     color: props.mode === "light" ? "black" : "white",
-    backgroundColor: props.mode === "dark" ? "#212529f0" : "white"
+    backgroundColor: props.mode === "dark" ? "#212529" : "white"
   }
 
   return (

@@ -1,5 +1,5 @@
 import './App.css';
-import Accordian from "./components/Accordian";
+import About from "./components/About";
 import AlertMsg from "./components/AlertMsg";
 import Navbar from "./components/Navbar";
 import TextBox from "./components/TextBox";
@@ -48,24 +48,20 @@ function App() {
       <BrowserRouter>
         {/* For Navbar */}
         <Navbar title="Text Tools" home="Home" about="About Us" mode={theme} changeTheme={changeTheme} />
+
         {/* For Alert Messages (must be below Navbar) */}
         <AlertMsg alert={alert} />
-        {/* For Text Area */}
-        <Routes>
 
-          <Route exact path='/' element={<div className="container my-4"><TextBox textBoxName="Enter Text Below" mode={theme} showAlertMsg={showAlertMsg} /> </div>} >
+        {/* For Text Area & About Section */}
+        <Routes>   {/* React Router Section */}
 
+          <Route exact path='/' element={<div className="container my-4"><TextBox textBoxName="Text Tools - Word Counter | Character Counter | Lowercase Converter | Uppercase Converter | Text Sorter | Text to Speech" mode={theme} showAlertMsg={showAlertMsg} /> </div>} >
           </Route>
-
-          <Route exact path="/about" element={<div className="container my-3"><Accordian mode={theme} /></div>}>
+          <Route exact path="/about" element={<div className="container my-3"><About mode={theme} /></div>}>
           </Route>
 
         </Routes>
       </BrowserRouter>
-      {/* For Accordian (Sample Dark Mode) */}
-      {/* <div className="container my-3">
-        <Accordian/>
-      </div> */}
     </>
   );
 }

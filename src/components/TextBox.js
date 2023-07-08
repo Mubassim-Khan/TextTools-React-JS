@@ -4,19 +4,16 @@ export default function TextBox(props) {
     const [text, setText] = useState("");        // useState hook
 
     const handleChanging = (event) => {             // Event Listener/handler for the Text Area
-        // console.log("Handle Changed");
         setText(event.target.value);
     }
 
     const convertUpperCase = () => {                // Function to Convert text into Upper Case 
-        // console.log("Convert uppercase Clicked");
         let newText = text.toUpperCase();
         setText(newText);
         props.showAlertMsg("Converted into UpperCase", "success");
     }
 
     const convertLowerCase = () => {                // Function to Convert text into Lower Case
-        // console.log('LowerCase Clicked');
         let newText = text.toLowerCase();
         setText(newText);
         props.showAlertMsg("Converted into LowerCase", "success");
@@ -28,10 +25,7 @@ export default function TextBox(props) {
     }
 
     const copyText = () => {                        // Function to Copy Text
-        let copy = document.getElementById("textBox");
-        copy.select();
-        navigator.clipboard.writeText(copy.value);
-        document.getSelection().removeAllRanges();
+        navigator.clipboard.writeText(text);
         props.showAlertMsg("Copied to ClipBoard", "success");
     }
 
@@ -60,21 +54,21 @@ export default function TextBox(props) {
         if (toogle.textContent === "Text to Speech") {
             toogle.innerHTML = "Stop";
         } else {
-            toogle.innerHTML = "Speak Text";
+            toogle.innerHTML = "Text to Speech";
             if (toogle.innerText === "Text to Speech") {
                 window.speechSynthesis.cancel();
             }
         }
     }
 
-    let words = text.split(" ").filter((element) => { return element.length !== 0 }).length
+    let words = text.split(/\s+/).filter((element) => { return element.length !== 0 }).length
 
     return (
         <>
             <div className='container'>
                 <h1 className='mb-3' style={{ color: props.mode === "light" ? "black" : "white" }}>{props.textBoxName}</h1>
                 <div className="mb-3">
-                    <textarea className="form-control my-3" value={text} id="textBox" rows="8" style={{ backgroundColor: props.mode === "light" ? "white" : "#212529", color: props.mode === "light" ? "black" : "white" }} onChange={handleChanging}></textarea>
+                    <textarea className="form-control my-4" value={text} id="textBox" rows="8" placeholder='Enter Text Here' style={{ backgroundColor: props.mode === "light" ? "white" : "#212529", color: props.mode === "light" ? "black" : "white" }} onChange={handleChanging}></textarea>
                 </div>
                 <button disabled={text.length === 0} className="btn btn-outline-warning mx-2 my-1" onClick={convertUpperCase}>Convert into UpperCase</button>
                 <button disabled={text.length === 0} className="btn btn-outline-primary mx-2 my-1" onClick={convertLowerCase}>Convert into LowerCase</button>
