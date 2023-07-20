@@ -2,7 +2,7 @@
 
 Text tools react application allows users to input text into a text field box which allows you to process yor text into various different forms & much more, by providing you plenty of options.
 
-Some of the froms, in which you can convert your text are:
+Some of the forms, in which you can convert your text are:
 
 ## - Lowercase
 ## - Uppercase
