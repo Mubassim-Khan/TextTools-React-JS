@@ -3,11 +3,13 @@
 TextTools allows user to input text into a text field box and convert it into various different forms, by providing plenty of options. You can also switch between Light & Dark Mode & have a preview of your entered text, total words, characters & approx. time took to read text.
 
 ## Preview
+Light Mode Enabled 
 
-![preview_1](https://github.com/Alok-2002/Netflix_Home_Page_Using_HTML_And_CSS/assets/93814546/4959b8ef-266f-4194-8709-b90223d69b2e)
+![Light_Mode](https://github.com/Mubassim-Khan/TextTools-React-JS/blob/master/src/Assets/Preview%202.png)
 
+Dark Mode Enabled
 
-![preview_2](https://github.com/Alok-2002/Netflix_Home_Page_Using_HTML_And_CSS/assets/93814546/4959b8ef-266f-4194-8709-b90223d69b2e)
+![Dark_Mode](https://github.com/Mubassim-Khan/TextTools-React-JS/blob/master/src/Assets/Preview.png)
 
 ## Features
 
