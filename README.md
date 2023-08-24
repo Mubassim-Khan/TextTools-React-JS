@@ -1,6 +1,6 @@
-# Text Tools React App
+# TextTools React App
 
-Text Tools allows user to input text into a text field box and convert it into various different forms, by providing plenty of options. You can also switch between Light & Dark Mode & have a preview of your entered text, total words, characters & approx. time took to read text.
+TextTools allows user to input text into a text field box and convert it into various different forms, by providing plenty of options. You can also switch between Light & Dark Mode & have a preview of your entered text, total words, characters & approx. time took to read text.
 
 ## Preview
 
@@ -25,9 +25,9 @@ Options in which text can be converted:
 
 ## Links
 
-[Text Tools App](https://mubassim-khan.github.io/TextTools-React-JS/) - Github Pages
+[TextTools App (Github Pages)](https://mubassim-khan.github.io/TextTools-React-JS/) - Visit via Github Pages
 
-[Text Tools App (Netlify)](https://mtexttools.netlify.app/) - Netlify
+[TextTools App (Netlify)](https://mtexttools.netlify.app/) - Visit via Netlify
 
 ## Tech used 🛠️
 
