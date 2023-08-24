@@ -1,23 +1,71 @@
-# Overview of Text Tools React App
+# Text Tools React App
 
-Text tools react application allows users to input text into a text field box which allows you to process yor text into various different forms & much more, by providing you plenty of options.
+Text Tools allows user to input text into a text field box and convert it into various different forms, by providing plenty of options. You can also switch between Light & Dark Mode & have a preview of your entered text, total words, characters & approx. time took to read text.
 
-Some of the froms, in which you can convert your text are:
+## Preview
 
-## - Lowercase
-## - Uppercase
-## - Sort Text
-## - Copy to Clipboard
-## - Text to Speech
-## - Reverse Text
+![preview_1](https://github.com/Alok-2002/Netflix_Home_Page_Using_HTML_And_CSS/assets/93814546/4959b8ef-266f-4194-8709-b90223d69b2e)
 
-Note: These Options can be performed by clicking their respective button.
-Get access to Text Tools App by clicking the link below
 
-[Text Tools App (Github Pages)](https://mubassim-khan.github.io/TextTools-React-JS/)
+![preview_2](https://github.com/Alok-2002/Netflix_Home_Page_Using_HTML_And_CSS/assets/93814546/4959b8ef-266f-4194-8709-b90223d69b2e)
 
-[Text Tools App (Netlify)](https://mtexttools.netlify.app/)
-#
+## Features
+
+- Responsive design: The web page adapts to different screen sizes, ensuring a consistent user experience on desktop and mobile devices.
+- Interactive components: The page includes interactive elements such as buttons, text box & switch mode.
+
+Options in which text can be converted:
+
+- Lowercase
+- Uppercase
+- Sort Text
+- Copy to Clipboard
+- Text to Speech
+- Reverse Text
+
+## Links
+
+[Text Tools App](https://mubassim-khan.github.io/TextTools-React-JS/) - Github Pages
+
+[Text Tools App (Netlify)](https://mtexttools.netlify.app/) - Netlify
+
+## Tech used 🛠️
+
+- [React](https://reactjs.org/) - UI Library
+- [Bootstrap CSS](https://getbootstrap.com/) - CSS Framework
+- [Prettier](https://prettier.io/) - Code Formatter
+- [usehooks-ts](https://usehooks-ts.com/) - Custom React Hooks
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Mubassim-Khan/TextTools-React-JS.git
+```
+
+2. Open the project in your preferred code editor.
+
+3. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+4. Feel free to modify the code and customize the page according to your preferences. You can update the content, change the colors, or add new features.
+
+## Contributing
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## Contact
+
+If you have any questions, suggestions, or feedback, you can reach out to the project maintainer:
+
+- Your Name : [Mubassim Ahmed Khan](https://www.linkedin.com/in/mubassim-ahmed-khan-8b835025a/)
+- Email: [mubassimkhan@gmail.com](mailto:mubassimkhan@gmail.com)
+
+---
+<!------->
+
 
 # Getting Started with Create React App
 
@@ -34,12 +82,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-
-### `npm run build` if fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
 
 ### `npm test`
 
